@@ -1,0 +1,35 @@
+{
+  "name": "genpark-enterprise-ai-agent-control-plane-governor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Enterprise AI agent control plane sitting between LLMs and agent workflows for cost & governance.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "agent-control-plane",
+    "llm-governance",
+    "cost-router",
+    "enterprise-ai",
+    "ph-august13"
+  ],
+  "inputs": {
+    "agent_request": {
+      "type": "object"
+    },
+    "policy_rules": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "governance_status": {
+      "type": "string"
+    },
+    "routed_model": {
+      "type": "string"
+    },
+    "token_cost_limit_ok": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
